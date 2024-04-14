@@ -4,14 +4,14 @@ import numpy as np
 import time
 #import anthropic
 from io import StringIO
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 
 #text splitter
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 
 # Vectorstore: https://python.langchain.com/en/latest/modules/indexes/vectorstores.html
-from langchain.vectorstores import FAISS  #facebook vectorizationfrom langchain.chains.question_answering import load_qa_chain
+
 from langchain.chains.question_answering import load_qa_chain
 
 #vectorize db index with chromadb
@@ -19,27 +19,27 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.chains import RetrievalQA
 
 #TXT loader
-from langchain.document_loaders import TextLoader  #for textfiles
+from langchain_community.document_loaders import TextLoader  #for textfiles
 
 #URL loader
-from langchain.document_loaders import UnstructuredURLLoader  #load urls into docoument-loader
+from langchain_community.document_loaders import UnstructuredURLLoader  #load urls into docoument-loader
 
 #Selenium URL Loader
-from langchain.document_loaders import SeleniumURLLoader
+from langchain_community.document_loaders import SeleniumURLLoader
 
 #CSV loader
 import csv
 from langchain.document_loaders.csv_loader import CSVLoader
 
 #PDF loader
-from langchain.document_loaders import UnstructuredPDFLoader
+from langchain_community.document_loaders import UnstructuredPDFLoader
 
 #Directory Loader
-from langchain.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader
 
 
-from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import OpenAIEmbeddings
 
 
 from langchain.chains import ConversationalRetrievalChain
