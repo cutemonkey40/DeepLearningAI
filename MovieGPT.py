@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np 
 import time
-import anthropic
+#import anthropic
 from io import StringIO
 from langchain.chat_models import ChatOpenAI
 
@@ -57,7 +57,7 @@ from langchain_community.chat_models import ChatOpenAI
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="file_qa_api_key:", type="password")   
 
-st.title("📝 File Q&A with Langchain")
+st.title("📝 Taiwan Movie Q&A with Langchain")
 
 uploaded_file = st.file_uploader("Choose a file")
 
